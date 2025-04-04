@@ -11,6 +11,12 @@ def home():
 @app.route('/whatsapp', methods=['POST'])
 def whatsapp_bot():
     incoming_msg = request.values.get('Body', '').lower()
+    print(f"Received message: {incoming_msg}")  # Log it
+
+
+@app.route('/whatsapp', methods=['POST'])
+def whatsapp_bot():
+    incoming_msg = request.values.get('Body', '').lower()
     response = MessagingResponse()
     msg = response.message()
 
